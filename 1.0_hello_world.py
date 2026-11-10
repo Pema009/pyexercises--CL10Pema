@@ -29,11 +29,10 @@ DELIVERABLE
 
 
 # Your code below
-print("HELLO WORLD")
-print("My name is Pema")
-print("1. Coffee")
-print("2. Coffee")
-print("3. Coffee")
-print("4. Coffee")
-print("5. Coffee")
-
+print("Hello Pema")
+print("1.coffee")
+print("2.coffee")
+print("3.coffee")
+print("4.coffee")
+print("5.coffee")
+print("6.coffee")

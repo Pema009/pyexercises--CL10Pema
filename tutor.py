@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """
 tutor.py : the course AI tutor, on a short leash.
 
