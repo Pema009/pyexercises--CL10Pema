@@ -60,3 +60,19 @@ while attempts < 3 and not confirmed:
 
 print("Total attempts:", attempts)
 print("Purchase confirmed:", confirmed)
+
+i = 0
+
+while i < 5:
+    print("Attempt number:", i + 1)
+    i = i + 1
+
+while True:
+    answer = input("Do you want to continue? (yes/no): ")
+    if answer.strip().lower() == "no":
+        print("Continuation stopped.")
+        break
+    elif answer.strip().lower() == "yes":
+        print("Continuing...")
+    else:
+        print("Please enter 'yes' or 'no'.")
