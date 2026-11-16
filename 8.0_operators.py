@@ -1,0 +1,78 @@
+"""Exercise 8.0 — Operators (bonus, not graded)
+
+WHAT THE PROGRAM MUST DO
+    Take two values of your choice and display, as a readable table, the result of every
+    comparison between them and of the logical combinations of those results.
+
+ANSWER THESE FIRST, in comments
+    1. What goes in?
+    2. What happens to it?
+    3. What comes out?
+    4. Which two values did you pick, and which comparison result surprised you?
+
+WHAT THE AI CANNOT KNOW
+    Your two values. Pick a pair where the answer is not obvious: two strings with
+    different capitalisation, a number and the same number written as text, or zero and
+    an empty string.
+
+CHECK IT YOURSELF
+    Predict each result before running. Count how many you got right.
+
+DELIVERABLE
+    This file, with your comments and your code.
+"""
+
+# 1. In:
+# The program uses two values, 10 and "10".
+
+# 2. Process:
+# The program compares the two values using comparison operators.
+# It also combines the comparison results using logical operators.
+
+# 3. Out:
+# The program displays a table showing each comparison
+# and its result as True or False.
+
+# 4. Which two values did I pick, and what surprised me?
+# I chose 10 as a number and "10" as text.
+# I expected them to be equal because they look the same.
+# I was surprised that 10 == "10" is False.
+# This happens because they have different data types.
+
+
+# Your code below
+
+a = 10
+b = "10"
+
+b_number = int(b)
+
+print("Value 1:", a)
+print("Value 2:", b)
+
+print("\nComparison Table")
+print("-" * 45)
+print(f"{'Comparison':<30} {'Result'}")
+print("-" * 45)
+
+print(f"{'a == b':<30} {a == b}")
+print(f"{'a != b':<30} {a != b}")
+
+print(f"{'a > int(b)':<30} {a > b_number}")
+print(f"{'a < int(b)':<30} {a < b_number}")
+print(f"{'a >= int(b)':<30} {a >= b_number}")
+print(f"{'a <= int(b)':<30} {a <= b_number}")
+
+result1 = a == b
+result2 = a != b
+
+print("\nLogical Operators")
+print("-" * 45)
+print(f"{'Logical Operation':<30} {'Result'}")
+print("-" * 45)
+
+print(f"{'result1 and result2':<30} {result1 and result2}")
+print(f"{'result1 or result2':<30} {result1 or result2}")
+print(f"{'not result1':<30} {not result1}")
+print(f"{'not result2':<30} {not result2}")
+

@@ -29,9 +29,22 @@ DELIVERABLE
 """
 
 # 1. In:
+# The program receives a list of numbers.
+
 # 2. Process, function by function:
+# The first function calculates the sum of the numbers.
+# The second function finds the largest number.
+# The third function finds the smallest number.
+# The fourth function uses all three to create a detailed message.
+
 # 3. Out:
+# The program displays a detailed message showing the total,
+# largest number, and smallest number in the list.
+
 # 4. The question my fourth function answers:
+# What is the total, highest, and lowest number in the list?
+# Splitting the work into three functions makes it easier
+# to test each calculation separately and find mistakes.
 
 
 # Your code below

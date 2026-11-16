@@ -27,10 +27,20 @@ DELIVERABLE
 """
 
 # 1. In:
-# 2. Process:
-# 3. Out:
-# 4. My function name, and why return rather than print:
+# The function receives a list of numbers.
 
+# 2. Process:
+# It adds the numbers and divides by the number of items.
+# If the list is empty, it returns 0.
+
+# 3. Out:
+# The function returns the average of the numbers.
+
+# 4. My function name, and why return rather than print:
+# My function is called calculate_average.
+# The name explains what the function does.
+# Return allows us to use the result again.
+# Print only displays the result.
 
 # Your code below
 number_1 = 10

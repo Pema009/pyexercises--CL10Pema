@@ -30,9 +30,67 @@ DELIVERABLE
 """
 
 # 1. In:
+# The user enters a student's name, age, course, and marks.
+
 # 2. Process:
+# The program collects the information and saves it in a CSV file.
+# If the file does not exist, it creates one with a header.
+# If it already exists, it adds another row.
+# Invalid values are rejected and the user is asked again.
+
 # 3. Out, file name and columns:
+# File name: student_records.csv
+# Columns: Name, Age, Course, Marks
+
 # 4. Why these columns, and what this file is for:
+# I chose these columns to record student information.
+# With 200 rows, I could compare marks and calculate averages.
 
 
 # Your code below
+
+import csv
+import os
+
+
+filename = "7.0_student_data.csv"
+
+
+name = input("Enter student name: ").strip()
+while name == "":
+    name = input("Please enter a name: ").strip()
+
+while True:
+    try:
+        age = int(input("Enter student age: "))
+        if age > 0:
+            break
+        print("Please enter a positive age.")
+    except ValueError:
+        print("Please enter a valid number.")
+
+course = input("Enter course: ").strip()
+while course == "":
+    course = input("Please enter a course: ").strip()
+
+while True:
+    try:
+        marks = float(input("Enter marks (0-100): "))
+        if 0 <= marks <= 100:
+            break
+        print("Marks must be between 0 and 100.")
+    except ValueError:
+        print("Please enter valid marks.")
+
+file_exists = os.path.exists(filename) and os.path.getsize(filename) > 0
+
+with open(filename, "a", newline="") as file:
+    writer = csv.writer(file)
+
+    if not file_exists:
+        writer.writerow(["Name", "Age", "Course", "Marks"])
+
+    writer.writerow([name, age, course, marks])
+
+print("Student information saved successfully!")
+print("File created:", os.path.abspath(filename))
